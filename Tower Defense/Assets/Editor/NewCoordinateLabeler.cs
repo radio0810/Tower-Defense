@@ -7,7 +7,7 @@ using TMPro;
 [ExecuteAlways]
 [RequireComponent(typeof(TextMeshPro))]
 
-public class CoordinateLabeler : MonoBehaviour
+public class NewCoordinateLabeler : MonoBehaviour
 {
     [SerializeField] Color defaultColor = Color.white;
     [SerializeField] Color blockedColor = Color.gray;
