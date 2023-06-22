@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5146830800429753327}
   - component: {fileID: 3944754545857433026}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Particle System bolts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4860,6 +4860,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 3144582324300694500}
   target: {fileID: 0}
+  towerRange: 15
+  projectileParticle: {fileID: 5146830800429753327}
 --- !u!1 &6131056645070147807
 GameObject:
   m_ObjectHideFlags: 0

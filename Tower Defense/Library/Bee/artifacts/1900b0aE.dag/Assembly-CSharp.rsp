@@ -355,9 +355,11 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/CoordinateLabeler.cs"
+"Assets/Scripts/Enemy/Enemy.cs"
 "Assets/Scripts/Enemy/EnemyHealth.cs"
 "Assets/Scripts/Enemy/EnemyMover.cs"
 "Assets/Scripts/Enemy/ObjectPool.cs"
+"Assets/Scripts/Gameplay/Bank.cs"
 "Assets/Scripts/TargetLocator.cs"
 "Assets/Scripts/Waypoint.cs"
 -langversion:9.0
