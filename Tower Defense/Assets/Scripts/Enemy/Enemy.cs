@@ -16,12 +16,14 @@ public class Enemy : MonoBehaviour
         bank = FindObjectOfType<Bank>();    
     }
 
+    // gives out gold if enemy is killed
     public void RewardGold()
     {
         if(bank == null) { return; }
         bank.Deposit(goldReward);
     }
 
+    // takes gold if enemy reaches end of path
     public void StealGold()
     {
         if(bank == null) { return; }

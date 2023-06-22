@@ -39,6 +39,7 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
+    //populate pool with enemies
     void PopulatePool()
     {
         pool = new GameObject[poolSize];
@@ -50,6 +51,7 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
+    //cycles through pool and enables enemies
     IEnumerator SpawnEnemies()
     {
         while (true)
