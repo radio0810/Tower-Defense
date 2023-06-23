@@ -9,6 +9,7 @@ public class ObjectPool : MonoBehaviour
     [SerializeField] [Range(0, 50)] int poolSize = 5;
 
     GameObject[] pool;
+    WaveManager waveManager;
 
     void Awake()
     {
@@ -18,6 +19,7 @@ public class ObjectPool : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        waveManager = FindObjectOfType<WaveManager>();
         StartCoroutine(SpawnEnemies());
     }
 
@@ -29,7 +31,7 @@ public class ObjectPool : MonoBehaviour
 
     void EnableObjectInPool()
     {
-        for (int i = 0; i < pool.Length; i++)
+        for (int i = 0; i < waveManager.WaveSize; i++)
         {
             if (!pool[i].activeInHierarchy)
             {

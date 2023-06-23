@@ -358,6 +358,7 @@
 "Assets/Scripts/Enemy/EnemyHealth.cs"
 "Assets/Scripts/Enemy/EnemyMover.cs"
 "Assets/Scripts/Enemy/ObjectPool.cs"
+"Assets/Scripts/Enemy/WaveManager.cs"
 "Assets/Scripts/Gameplay/Bank.cs"
 "Assets/Scripts/NewCoordinateLabeler.cs"
 "Assets/Scripts/Tower/TargetLocator.cs"

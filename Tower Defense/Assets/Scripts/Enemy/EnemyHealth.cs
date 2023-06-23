@@ -9,12 +9,26 @@ public class EnemyHealth : MonoBehaviour
     [Tooltip("Adds amount to maxHitPoints when enemy dies")]
     [SerializeField] int difficultyRamp = 1;
     [SerializeField] int currentHitPoints = 0;
+    WaveManager waveManager;
+    int currentWave = 0;
 
     Enemy enemy;
     // Start is called before the first frame update
     void Start()
     {
         enemy = GetComponent<Enemy>();
+        
+        waveManager = FindObjectOfType<WaveManager>();
+        currentWave = waveManager.CurrentWave();
+    }
+
+    void Update()
+    {
+        if(currentWave != waveManager.CurrentWave())
+        {
+            IncreaseDifficulty();
+            currentWave = waveManager.CurrentWave();
+        }
     }
 
     void OnEnable()
@@ -41,8 +55,13 @@ public class EnemyHealth : MonoBehaviour
     void KillEnemy()
     {
         gameObject.SetActive(false);
-        maxHitPoints += difficultyRamp;
-        enemy.RewardGold();
         
+        enemy.RewardGold();
+        waveManager.KillCount++;
+    }
+
+    public void IncreaseDifficulty()
+    {
+        maxHitPoints += difficultyRamp;
     }
 }
