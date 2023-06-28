@@ -7,20 +7,23 @@ using TMPro;
 [ExecuteAlways]
 [RequireComponent(typeof(TextMeshPro))]
 
-public class NewCoordinateLabeler : MonoBehaviour
+public class CoordinateLabeler : MonoBehaviour
 {
     [SerializeField] Color defaultColor = Color.white;
     [SerializeField] Color blockedColor = Color.gray;
     TextMeshPro label;
     Vector2Int coordinates = new Vector2Int();
 
-    Waypoint waypoint;
+    Tile waypoint;
+
+    GridManager gridmanger;
 
 
     void Awake()
     {
+        gridmanger = FindObjectOfType<GridManager>();
         label = GetComponent<TextMeshPro>();
-        waypoint = GetComponentInParent<Waypoint>();
+       
         label.enabled = false;
         DisplayCoordinates();
        
@@ -62,8 +65,9 @@ public class NewCoordinateLabeler : MonoBehaviour
     //displays coordinates of waypoint
     void DisplayCoordinates()
     {
-        coordinates.x = Mathf.RoundToInt(transform.parent.position.x / UnityEditor.EditorSnapSettings.move.x);
-        coordinates.y = Mathf.RoundToInt(transform.parent.position.z / UnityEditor.EditorSnapSettings.move.z);
+        if(gridmanger == null) { return; }
+        coordinates.x = Mathf.RoundToInt(transform.parent.position.x / gridmanger.UnityGridSize);
+        coordinates.y = Mathf.RoundToInt(transform.parent.position.z / gridmanger.UnityGridSize);
 
         label.text = coordinates.x + "," + coordinates.y;
     }

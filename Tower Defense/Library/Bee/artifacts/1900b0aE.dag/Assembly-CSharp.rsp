@@ -357,16 +357,16 @@
 "Assets/Pathfinding/GridManager.cs"
 "Assets/Pathfinding/Node.cs"
 "Assets/Pathfinding/Pathfinder.cs"
+"Assets/Scripts/CoordinateLabel.cs"
 "Assets/Scripts/Enemy/Enemy.cs"
 "Assets/Scripts/Enemy/EnemyHealth.cs"
 "Assets/Scripts/Enemy/EnemyMover.cs"
 "Assets/Scripts/Enemy/ObjectPool.cs"
 "Assets/Scripts/Enemy/WaveManager.cs"
 "Assets/Scripts/Gameplay/Bank.cs"
-"Assets/Scripts/NewCoordinateLabeler.cs"
+"Assets/Scripts/Tile.cs"
 "Assets/Scripts/Tower/TargetLocator.cs"
 "Assets/Scripts/Tower/Tower.cs"
-"Assets/Scripts/Waypoint.cs"
 -langversion:9.0
 
 /deterministic
